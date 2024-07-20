@@ -50,6 +50,12 @@ return function (RouteBuilder $routes): void {
     $routes->setRouteClass(DashedRoute::class);
 
     $routes->scope('/', function (RouteBuilder $builder): void {
+        /**
+         * Main index페이지
+         */
+        $builder->connect('/index', ['controller' => 'Main', 'action' => 'index'])->setMethods(['GET']);
+
+
         /*
          * Here, we are connecting '/' (base path) to a controller called 'Pages',
          * its action called 'display', and we pass a param to select the view file
