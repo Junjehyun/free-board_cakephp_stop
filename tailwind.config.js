@@ -6,7 +6,11 @@ module.exports = {
         './webroot/**/*.js',
     ],
     theme: {
-    extend: {},
+        extend: {
+            fontFamily: {
+                'gowun-dodum': ['Gowun Dodum', 'sans-serif'],
+            },
+        },
     },
     plugins: [],
 }

@@ -17,9 +17,7 @@ class MainController extends AppController
      */
     public function index()
     {
-        // $mainController = $this->paginate($this->MainController);
 
-        // $this->set(compact('mainController'));
     }
 
     /**
