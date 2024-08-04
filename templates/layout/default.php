@@ -41,6 +41,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    <style>
+        body {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+    </style>
 </head>
 <body class="font-gowun-dodum">
     <nav class="top-nav">
