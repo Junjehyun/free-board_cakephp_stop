@@ -53,7 +53,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body class="font-gowun-dodum">
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>FREE</span>BOARD</a>
+            <a href="<?= $this->Url->build('/') ?>"><span>Focus</span>Programming</a>
         </div>
         <div class="top-nav-links">
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>

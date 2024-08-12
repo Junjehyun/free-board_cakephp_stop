@@ -1,28 +1,22 @@
-<div class="container mx-auto py-8">
-    <h1 class="text-3xl font-bold text-center mb-5">자유게시판</h1>
-    <table class="">
-        <thead>
-            <tr class="bg-zinc-100">
-                <th class="border-r border-zinc-300">번호</th>
-                <th class="border-r border-zinc-300">제목</th>
-                <th class="border-r border-zinc-300">작성자</th>
-                <th class="border-r border-zinc-300">작성일</th>
-                <th class="border-r border-zinc-300">조회수</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-zinc-100">
-                <td class="border-r border-zinc-300"></td>
-                <td class="border-r border-zinc-300"></td>
-                <td class="border-r border-zinc-300"></td>
-                <td class="border-r border-zinc-300"></td>
-                <td class="border-r border-zinc-300"></td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="flex items-center justify-end mt-5">
-        <button class="bg-zinc-200 text-white border-none">
-            create
-        </button>
+<div class="container flex justify-center mx-auto max-w-4xl p-6 py-8">
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mx-auto">
+        <a href="#">
+            <button class="bg-zinc-300 hover:bg-zinc-400 text-white font-bold py-5 px-6 sm:px-8 lg:px-10 rounded w-full h-40 sm:h-60 lg:h-80 text-lg sm:text-xl lg:text-2xl transform transition duration-500 ease-in-out hover:scale-110 border-none">
+                <i class="fas fa-bell mr-2"></i>
+                JAVA
+            </button>
+        </a>
+        <a href="#">
+            <button class="bg-zinc-300 hover:bg-zinc-400 text-white font-bold py-5 px-6 sm:px-8 lg:px-10 rounded w-full h-40 sm:h-60 lg:h-80 text-lg sm:text-xl lg:text-2xl transform transition duration-500 ease-in-out hover:scale-110 border-none">
+                <i class="fas fa-bell mr-2"></i>
+                PHP
+            </button>
+        </a>
+        <a href="#">
+            <button class="bg-zinc-300 hover:bg-zinc-400 text-white font-bold py-5 px-6 sm:px-8 lg:px-10 rounded w-full h-40 sm:h-60 lg:h-80 text-lg sm:text-xl lg:text-2xl transform transition duration-500 ease-in-out hover:scale-110 border-none">
+                <i class="fas fa-bell mr-2"></i>
+                ETC
+            </button>
+        </a>
     </div>
 </div>
