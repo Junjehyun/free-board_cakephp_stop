@@ -53,7 +53,25 @@ return function (RouteBuilder $routes): void {
         /**
          * Main index페이지
          */
-        $builder->connect('/index', ['controller' => 'Main', 'action' => 'index'])->setMethods(['GET']);
+        $builder->connect('/index',
+        [
+            'controller' => 'Main',
+            'action' => 'index'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        /**
+         * Java Controller
+         */
+
+        /**
+         * Php Controller
+         */
+
+        /**
+         * Etc Controller
+         */
 
 
         /*
