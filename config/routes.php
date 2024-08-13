@@ -63,14 +63,20 @@ return function (RouteBuilder $routes): void {
 
         /**
          * Java Controller
+         *
+         * Java Controller 관련 Route
          */
 
         /**
          * Php Controller
+         *
+         * Php Controller 관련 Route
          */
 
         /**
          * Etc Controller
+         *
+         * Etc Controller 관련 Route
          */
 
 
