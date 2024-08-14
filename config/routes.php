@@ -52,6 +52,8 @@ return function (RouteBuilder $routes): void {
     $routes->scope('/', function (RouteBuilder $builder): void {
         /**
          * Main index페이지
+         *
+         * Main Controller 관련 Route
          */
         $builder->connect('/index',
         [
@@ -66,6 +68,13 @@ return function (RouteBuilder $routes): void {
          *
          * Java Controller 관련 Route
          */
+        $builder->connect('/java-index',
+        [
+            'controller' => 'Java',
+            'action' => 'index'
+        ]
+            )->setMethods(['GET'])
+        ;
 
         /**
          * Php Controller
