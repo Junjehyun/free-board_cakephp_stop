@@ -68,12 +68,94 @@ return function (RouteBuilder $routes): void {
          *
          * Java Controller 관련 Route
          */
+
+        // Java Index 페이지
         $builder->connect('/java-index',
         [
             'controller' => 'Java',
             'action' => 'index'
         ]
             )->setMethods(['GET'])
+        ;
+
+        // Java Curriculum 페이지
+        $builder->connect('/java-curriculum',
+        [
+            'controller' => 'Java',
+            'action' => 'curriculum'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        /**
+         * Java Beginner Zone
+         */
+
+        // Java Beginner(초급) 페이지
+        $builder->connect('/java-beginner',
+        [
+            'controller' => 'Java',
+            'action' => 'beginner'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        /**
+         * Java Intermediate Zone
+         *
+         */
+        // Java Intermediate(중급) 페이지
+        $builder->connect('/java-middle',
+        [
+            'controller' => 'Java',
+            'action' => 'middle'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        // Java Advanced(고급) 페이지
+        $builder->connect('/java-advanced',
+        [
+            'controller' => 'Java',
+            'action' => 'advanced'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        // Java Spring 페이지
+        $builder->connect('/java-spring',
+        [
+            'controller' => 'Java',
+            'action' => 'spring'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        // Java 질문게시판
+        $builder->connect('/java-question',
+        [
+            'controller' => 'Java',
+            'action' => 'question'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        // Java 자유게시판
+        $builder->connect('/java-free',
+        [
+            'controller' => 'Java',
+            'action' => 'free'
+        ]
+            )->setMethods(['GET'])
+        ;
+
+        // Java 글쓰기 (Write)
+        $builder->connect('/java-write',
+        [
+            'controller' => 'Java',
+            'action' => 'write'
+        ]
+            )->setMethods(['GET', 'POST'])
         ;
 
         /**

@@ -50,10 +50,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
     </style>
 </head>
-<body class="font-gowun-dodum">
+<body class="font-gowun-dodum bg-white">
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Un</span>titled</a>
+            <a href="<?= $this->Url->build('/index') ?>"><span>Un</span>known</a>
         </div>
         <div class="top-nav-links">
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
