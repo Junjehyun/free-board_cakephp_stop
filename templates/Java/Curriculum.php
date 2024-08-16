@@ -1,3 +1,4 @@
+<?php $this->assign('title', 'Java 커리큘럼'); ?>
 <div class="flex justify-center">
     <a href="/java-curriculum">
         <button class="mb-10 py-3 px-3 text-gray-900 hover:bg-transparent hover:text-gray-900 text-5xl font-bold border-none">

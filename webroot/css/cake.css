@@ -74,18 +74,27 @@ th {
     white-space: nowrap;
 }
 
-/* Nav bar */
+/* Nav bar
+    shadow-xl효과 추가
+*/
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 112rem;
+    /* max-width: 112rem; */
+    width: 100%; /* 전체 너비 사용 */
+    max-width: 112rem; /* 최대 너비 제한 */
     padding: 2rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: rgb(253 242 248);
 }
+
+/* 헤더 타이틀 색상들 */
 .top-nav-title a {
     font-size: 2.4rem;
-    color: #d33c43;
+    /* color: #d33c43; 원래 디폴트값  */
+    color: #d832d8c5;
 }
 .top-nav-title span {
     color: #404041;
@@ -203,7 +212,7 @@ th {
 
 @media screen and (max-width: 640px) {
     .top-nav {
-        margin: 0 auto;
+        /* margin: 0 auto; */
     }
     .side-nav {
         margin-bottom: 1rem;

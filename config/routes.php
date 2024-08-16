@@ -158,6 +158,15 @@ return function (RouteBuilder $routes): void {
             )->setMethods(['GET', 'POST'])
         ;
 
+        // Java 글 상세보기 (View, 나는 Show라고 지정함.)
+        $builder->connect('/java-show/{id}',
+        [
+            'controller' => 'Java',
+            'action' => 'show'
+        ]
+            )->setMethods(['GET'])
+        ;
+
         /**
          * Php Controller
          *

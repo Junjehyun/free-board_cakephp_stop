@@ -1,3 +1,4 @@
+<?php $this->assign('title', 'Java World'); ?>
 <h1 class="text-5xl text-center">Java</h1>
 <div class="mt-10 flex justify-center space-x-5">
     <a href="/java-curriculum">
@@ -36,7 +37,7 @@
         </button>
     </a>
 </div>
-<div class="mt-20 text-gray-700 w-full rounded-2xl shadow-2xl bg-zinc-50 text-center p-10">
+<div class="container w-1/2 mt-20 text-gray-700 rounded-2xl shadow-2xl bg-zinc-50 text-center p-20">
     <p class="mt-3 mb-10">
         <strong>Java란 무엇인가?</strong><br>
     </p>
