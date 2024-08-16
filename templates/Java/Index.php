@@ -1,5 +1,7 @@
 <?php $this->assign('title', 'Java World'); ?>
-<h1 class="text-5xl text-center">Java</h1>
+<h1 class="text-5xl text-center">
+    <i class="fa-2x fa-brands fa-java"></i> Java
+</h1>
 <div class="mt-10 flex justify-center space-x-5">
     <a href="/java-curriculum">
         <button class="bg-pink-300 text-white py-2 px-4 rounded font-bold hover:bg-pink-600 border-none">

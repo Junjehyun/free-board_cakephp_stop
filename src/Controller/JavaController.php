@@ -95,6 +95,11 @@ class JavaController extends AppController
             'contain' => ['Categories']
         ]);
 
+        // 조회수 증가
+        $post->views += 1;
+        // 변경된 조회수 DB에 저장
+        $this->Posts->save($post);
+
         // 뷰에 데이터 전달
         $this->set(compact('post'));
     }
