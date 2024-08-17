@@ -6,9 +6,17 @@
         </button>
     </a>
 </div>
-<div class="w-full max-w-7xl mx-auto flex justify-end space-x-3">
-    <input type="text" placeholder="검색어 입력" class="border border-gray-300 rounded-l py-2 px-4" style="width: 150px;">
-    <button class="bg-blue-400 text-white rounded-r px-4 py-2 border-none">검색</button>
+<div class="w-full max-w-7xl mx-auto flex justify-end">
+    <div class="flex justify-end">
+        <select name="search-beginner" id="search-beginner" class="">
+            <option value="titleAndContent">제목+내용</option>
+            <option value="title">제목</option>
+            <option value="content">내용</option>
+            <option value="author">작성자</option>
+        </select>
+    </div>
+    <input type="text" placeholder="검색어 입력" class="rounded-none border border-gray-300 py-2 px-4" style="width: 150px;">
+    <button class="bg-pink-300 text-white px-4 py-2 rounded-none border-none">검색</button>
 </div>
 <div class="mt-10">
     <table class="w-full max-w-7xl mx-auto border-collapse border border-gray-300 shadow-xl">
