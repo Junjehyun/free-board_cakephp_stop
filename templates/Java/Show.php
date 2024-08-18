@@ -28,6 +28,70 @@
             </button>
         </div>
     </div>
+    <!-- 코멘트 리스트 표시 -->
+    <div class="mt-10 mb-20">
+        <h2 class="text-2xl font-bold mb-4 ml-1">댓글</h2>
+        <?php if (!empty($post->comments)): ?>
+            <?php foreach ($post->comments as $comment): ?>
+                <div class="bg-white shadow-xl rounded-lg h-52 p-10 mb-10">
+                    <p class="text-gray-800"><i class="fa-regular fa-user fa-sm"></i> <?= h($comment->author) ?></p>
+                    <p class="text-gray-600 text-lg"><i class="fa-regular fa-clock"></i> <?= $comment->created->format('y/m/d H:i') ?></p>
+                    <p class="mt-5 text-2xl"><?= h($comment->content) ?></p>
+                    <div class="flex justify-end space-x-3">
+                        <!-- 댓글 수정 아이콘 -->
+                        <button
+                            onclick="toggleEditForm(<?= $comment->id ?>)"
+                            class="text-sky-400 hover:text-sky-700 border-none h-5
+                        ">
+                            <i class="fa-solid fa-edit"></i>
+                        </button>
+                        <!-- 댓글 삭제 아이콘 -->
+                        <?= $this->Form->postLink(
+                            '<i class="fa-solid fa-trash-alt"></i>',
+                            [
+                                'controller' => 'Java',
+                                'action' => 'deleteComment',
+                                $comment->id
+                            ],
+                            [
+                                'confirm' => '정말 댓글을 삭제하시겠습니까?',
+                                'escape' => false,
+                                'class' => 'text-red-500 hover:text-red-700'
+                            ]
+                        ) ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>댓글이 없습니다. 첫 번째 댓글을 남겨보세요!</p>
+        <?php endif; ?>
+    </div>
+    <!-- 코멘트 입력 폼 -->
+    <div class="rounded-lg shadow-xl p-10 mt-10">
+        <?= $this->Form->create(null, ['url' => ['controller' => 'Java', 'action' => 'comment']]) ?>
+            <?= $this->Form->hidden('post_id', ['value' => $post->id]) ?>
+            <div class="mb-4">
+                <?= $this->Form->control('author', [
+                    'label' => '댓글작성',
+                    'placeholder' => '이름을 입력하세요',
+                    'class' => 'w-full p-2 border border-gray-300 rounded'
+                ]) ?>
+            </div>
+            <div class="mb-4">
+                <?= $this->Form->textarea('content', [
+                    'label' => '내용',
+                    'placeholder' => '댓글을 입력하세요',
+                    'class' => 'w-full p-2 border border-gray-300 rounded',
+                    'rows' => 4
+                ]) ?>
+            </div>
+            <div class="text-right">
+                <?= $this->Form->button('댓글 작성', [
+                    'class' => 'bg-sky-400 text-white py-2 px-4 rounded hover:bg-blue-700 border-none'
+                ]) ?>
+            </div>
+        <?= $this->Form->end() ?>
+    </div>
     <div class="flex justify-end mt-10">
         <a href="/java-beginner" class="text-gray-900 hover:underline"><i class="fa-2x fa-solid fa-arrow-left"></i></a>
     </div>

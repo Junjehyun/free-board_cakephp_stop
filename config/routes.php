@@ -167,6 +167,39 @@ return function (RouteBuilder $routes): void {
             )->setMethods(['GET'])
         ;
 
+        // Java Show 페이지의 Comment 작성
+        $builder->connect('/java-comment',
+        [
+            'controller' => 'Java',
+            'action' => 'comment'
+        ]
+            )->setMethods(['POST'])
+        ;
+
+        // Java Show 페이지의 Comment 삭제
+        $builder->connect('/java/delete-comment/{id}',
+            [
+                'controller' => 'Java',
+                'action' => 'deleteComment'
+            ],
+            [
+                'id' => '\d+', 'pass' => ['id'],
+                'methods' => ['POST', 'DELETE']
+            ]
+        );
+
+        // Java Show 페이지의 Comment 수정
+        $builder->connect('/java/edit-comment/{id}',
+            [
+                'controller' => 'Java',
+                'action' => 'editComment'
+            ],
+            [
+                'id' => '\d+', 'pass' => ['id'],
+                'methods' => ['POST', 'PUT']
+            ]
+        );
+
         /**
          * Php Controller
          *

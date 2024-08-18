@@ -52,6 +52,14 @@ class PostsTable extends Table
             'foreignKey' => 'category_id',
             'joinType' => 'INNER',  // 카테고리가 반드시 존재해야 게시글이 저장된다.
         ]);
+
+        // Posts 테이블과 Comments 테이블 간의 관계 설정
+        // Post모델은 여러개의 코멘트를 가질 수 있으므로 hasMany() 메서드를 사용한다.
+        $this->hasMany('Comments', [
+            'foreignKey' => 'post_id',
+            'dependent' => true,  // 게시글이 삭제되면 해당 게시글의 코멘트도 삭제된다.
+            'cascadeCallbacks' => true,  // 코멘트가 삭제될 때 코멘트의 삭제 이벤트를 실행한다.
+        ]);
     }
 
     /**

@@ -6,19 +6,26 @@
         </button>
     </a>
 </div>
-<div class="w-full max-w-7xl mx-auto flex justify-end">
-    <div class="flex justify-end">
-        <select name="search-beginner" id="search-beginner" class="">
-            <option value="titleAndContent">제목+내용</option>
-            <option value="title">제목</option>
-            <option value="content">내용</option>
-            <option value="author">작성자</option>
-        </select>
-    </div>
-    <input type="text" placeholder="검색어 입력" class="rounded-none border border-gray-300 py-2 px-4" style="width: 150px;">
-    <button class="bg-pink-300 text-white px-4 py-2 rounded-none border-none">검색</button>
-</div>
 <div class="mt-10">
+    <div class="w-full max-w-7xl mx-auto flex justify-start my-5">
+        <?= $this->Form->create(null, ['type' => 'get', 'class' => 'flex justify-end space-x-1']) ?>
+            <select name="search-beginner" class="text-xl">
+                <option value="titleAndContent" <?= $this->request->getQuery('search-beginner') === 'titleAndContent' ? 'selected' : '' ?>>제목+내용</option>
+                <option value="title" <?= $this->request->getQuery('search-beginner') === 'title' ? 'selected' : '' ?>>제목</option>
+                <option value="content" <?= $this->request->getQuery('search-beginner') === 'content' ? 'selected' : '' ?>>내용</option>
+                <option value="author" <?= $this->request->getQuery('search-beginner') === 'author' ? 'selected' : '' ?>>작성자</option>
+            </select>
+            <?= $this->Form->text('keyword', [
+                'placeholder' => '검색어 입력',
+                'value' => $this->request->getQuery('keyword'),
+                'class' => 'border border-gray-300 py-2 px-4',
+                'style' => 'width: 150px;'
+            ]) ?>
+            <?= $this->Form->button('검색', [
+                'class' => 'bg-pink-300 hover:bg-pink-600 text-white px-4 py-2 border-none rounded-r'
+            ]) ?>
+        <?= $this->Form->end() ?>
+    </div>
     <table class="w-full max-w-7xl mx-auto border-collapse border border-gray-300 shadow-xl">
         <thead>
             <tr>
@@ -49,6 +56,9 @@
                         <a href="<?= $this->Url->build(['controller' => 'Java', 'action' => 'show', $post->id]) ?>"
                             class="text-gray-500 hover:underline font-semibold">
                             <?= h($post->title) ?>
+                            <?php if ($post->comment_count > 0): ?>
+                                (<?= $post->comment_count ?>)
+                            <?php endif; ?>
                         </a>
                     </td>
                     <td class="border-r border-gray-300 p-2 text-center font-bold text-blue-500">
@@ -77,4 +87,14 @@
             뒤로
         </button>
     </a>
+</div>
+<!-- 페이지네이션 링크 표시 너무 안예뻐서 추후 수정예정-->
+<div class="flex justify-center">
+    <ul class="pagination">
+        <?= $this->Paginator->first('<< 처음') ?>
+        <?= $this->Paginator->prev('< 이전') ?>
+        <?= $this->Paginator->numbers() ?>
+        <?= $this->Paginator->next('다음 >') ?>
+        <?= $this->Paginator->last('마지막 >>') ?>
+    </ul>
 </div>
