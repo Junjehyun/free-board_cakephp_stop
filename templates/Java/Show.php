@@ -60,6 +60,25 @@
                             ]
                         ) ?>
                     </div>
+                    <!-- 댓글 수정 폼 -->
+                    <div id="edit-comment-<?= $comment->id ?>" style="display: none;">
+                        <?= $this->Form->create($comment, ['url' => ['controller' => 'Java', 'action' => 'editComment', $comment->id]]) ?>
+                            <?= $this->Form->textarea('content', [
+                                'class' => 'w-full bg-zinc-50 shadow-xl p-2 border border-gray-300 rounded',
+                                'rows' => 4
+                                ])
+                            ?>
+                            <div class="text-right mt-2">
+                                <?= $this->Form->button('수정 완료', [
+                                    'class' => 'bg-sky-300 text-white py-2 px-4 rounded hover:bg-sky-600 border-none'
+                                    ])
+                                ?>
+                                <button type="button" onclick="toggleEditForm(<?= $comment->id ?>)" class="bg-pink-300 text-white py-2 px-4 rounded hover:bg-pink-600 border-none">
+                                    취소
+                                </button>
+                            </div>
+                        <?= $this->Form->end() ?>
+                    </div>
                 </div>
             <?php endforeach; ?>
         <?php else: ?>
@@ -93,6 +112,18 @@
         <?= $this->Form->end() ?>
     </div>
     <div class="flex justify-end mt-10">
-        <a href="/java-beginner" class="text-gray-900 hover:underline"><i class="fa-2x fa-solid fa-arrow-left"></i></a>
+        <a href="/java-beginner" class="text-gray-900 hover:underline">
+            <i class="fa-2x fa-solid fa-arrow-left"></i>
+        </a>
     </div>
 </div>
+<script>
+    function toggleEditForm(commentId) {
+        var editForm = document.getElementById('edit-comment-' + commentId);
+        if (editForm.style.display === 'none') {
+            editForm.style.display = 'block';
+        } else {
+            editForm.style.display = 'none';
+        }
+    }
+</script>

@@ -215,7 +215,7 @@ class JavaController extends AppController
      * @return void
      */
     public function editComment($id) {
-        // 댓글을 가져옴
+        // 댓글 수정 요청이 올 때, 해당 댓글을 가져옴
         $comment = $this->Comments->get($id);
 
         if($this->request->is(['post', 'put'])) {
