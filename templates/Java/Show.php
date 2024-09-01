@@ -57,16 +57,16 @@
                 <tbody>
                     <?php foreach ($post->comments as $comment): ?>
                         <tr>
-                            <td class="text-gray-800 text-center border-b border-gray-100">
+                            <td class="text-gray-800 text-center border-b border-gray-50">
                                 <i class="fa-regular fa-user fa-sm"></i> <?= h($comment->author) ?>
                             </td>
-                            <td class="text-gray-800 border-b border-gray-100">
+                            <td class="text-gray-800 border-b border-gray-50">
                                 <?= h($comment->content) ?>
                             </td>
                             <td class="text-gray-600 text-xl text-center border-b border-gray-100">
                                 <i class="fa-regular fa-clock"></i> <?= $comment->created->format('y/m/d H:i') ?>
                             </td>
-                            <td class="p-3 border-b border-gray-100">
+                            <td class="p-3 border-b border-gray-50">
                                 <div class="space-x-0 text-center">
                                     <!-- 댓글 수정 아이콘 -->
                                     <button
@@ -140,7 +140,7 @@
                 ]) ?>
             </div>
             <div class="text-right">
-                <?= $this->Form->button('댓글 작성', [
+                <?= $this->Form->button('작성', [
                     'class' => 'bg-sky-400 text-white py-2 px-4 rounded hover:bg-blue-700 border-none'
                 ]) ?>
             </div>
