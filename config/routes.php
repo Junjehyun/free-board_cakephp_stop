@@ -200,6 +200,18 @@ return function (RouteBuilder $routes): void {
             ]
         );
 
+        // Java Show 페이지의 게시글 수정
+        $builder->connect('/java/edit-post/{id}',
+            [
+                'controller' => 'Java',
+                'action' => 'editPost'
+            ],
+            [
+                'id' => '\d+', 'pass' => ['id'],
+                'methods' => ['POST', 'PUT']
+            ]
+        );
+
         /**
          * Php Controller
          *

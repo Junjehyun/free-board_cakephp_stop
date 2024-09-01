@@ -236,6 +236,18 @@ class JavaController extends AppController
     }
 
     /**
+     * 게시글 수정 메서드
+     *
+     * @return void
+     * @param mixed $id 수정할 게시글의 ID
+     * @throws \Cake\Http\Exception\MethodNotAllowedException 게시글을 찾을 수 없을 때 발생
+     */
+    public function editPost($id) {
+        // 게시글 수정 요청이 올 때, Posts 테이블에서 해당 게시글을 가져옴
+        $post = $this->Posts->get($id);
+    }
+
+    /**
      * Middle method
      *
      * @return void
