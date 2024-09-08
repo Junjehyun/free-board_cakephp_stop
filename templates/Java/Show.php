@@ -68,6 +68,7 @@
                             </td>
                             <td class="p-3 border-b border-gray-50">
                                 <div class="space-x-0 text-center">
+                                    <!-- 아무래도 댓글 수정없애고, 삭제기능만 남기고 삭제되면 삭제되었습니다. 흔적 남기기로 하는게 좋을듯하다.-->
                                     <!-- 댓글 수정 아이콘 -->
                                     <button
                                         onclick="toggleEditForm(<?= $comment->id ?>)"

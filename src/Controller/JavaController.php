@@ -10,6 +10,7 @@ class JavaController extends AppController
 
     /**
      * 초기화 세팅
+     *
      * @return void
      */
     public function initialize(): void{
