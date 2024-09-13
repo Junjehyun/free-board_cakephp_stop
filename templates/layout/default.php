@@ -20,7 +20,7 @@
  * 기본값: UnKnown
  * 각 페이지별로 커스터 마이징 허셈
  */
-$defaulTitle = 'UnKnown';
+$defaulTitle = 'History of KBO';
 $pageTitle = $this->fetch('title');
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
@@ -67,7 +67,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav class="top-nav">
         <div class="top-nav-title">
             <a href="<?= $this->Url->build('/index') ?>">
-                <span><i class="fa-solid fa-power-off"></i> Un</span>known
+                <span>
+                    <img src="img/logo/kbo_header_logo.jpg" style="width:80px;">
+                </span>
+                <!-- <span> KBO </span>HISTORY -->
             </a>
         </div>
         <div class="top-nav-links">

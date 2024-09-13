@@ -40,7 +40,8 @@ input[type='reset'],
 input[type='submit']
 {
     background-color:#d33c43;
-    border:0.1rem solid #d33c43;
+    /* border:0.1rem solid #d33c43; */
+    border:0.1rem;
     border-radius:.4rem;color:#fff;
     cursor:pointer;
     display:inline-block;
@@ -67,7 +68,7 @@ input[type='submit']:focus,
 input[type='submit']:hover
 {
     border-color:#606c76;
-    color:#fff;
+    /* color:#fff; */
     outline:0
 }
 .button[disabled],
