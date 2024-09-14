@@ -1,7 +1,7 @@
 /* 아코디언 버튼 스타일 */
 .accordion-button {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: navy;
+    color: white;
     cursor: pointer;
     padding: 10px;
     width: 100%;
@@ -9,11 +9,13 @@
     outline: none;
     text-align: left;
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
     transition: background-color 0.3s ease;
 }
 
 .accordion-button:hover {
-    background-color: #ddd;
+    background-color: black;
 }
 
 /* 아코디언 내용 스타일 */
