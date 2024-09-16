@@ -56,14 +56,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
     <style>
         body {
-            font-family: 'Gowun Dodum', sans-serif;
+            font-family:'JetBrains Mono', sans-serif;
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Gowun Dodum', sans-serif;
+            font-family:'JetBrains Mono', sans-serif;
         }
     </style>
 </head>
-<body class="font-gowun-dodum bg-white flex flex-col min-h-screen">
+<body class="font-jetbrains-mono bg-white flex flex-col min-h-screen">
     <nav class="top-nav">
         <div class="top-nav-title">
             <a href="<?= $this->Url->build('/index') ?>">

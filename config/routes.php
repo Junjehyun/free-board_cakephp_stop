@@ -53,10 +53,20 @@ return function (RouteBuilder $routes): void {
 
         /**
          * Index page route
+         *
          */
         $builder->connect(
             '/index',
             ['controller' => 'Main', 'action' => 'index']
+        );
+
+        /**
+         * Year Page
+         *
+         */
+        $builder->connect(
+            '/year',
+            ['controller' => 'Year', 'action' => 'yearIndex']
         );
 
 
