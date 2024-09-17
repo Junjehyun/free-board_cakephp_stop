@@ -43,6 +43,8 @@ class CreateTeamRecords extends AbstractMigration
             ->addColumn('home_record', 'string', ['limit' => 20])
             // 원정 기록
             ->addColumn('away_record', 'string', ['limit' => 20])
+            // (99,00시즌 한정) 리그 구분 (드림리그 또는 매직리그)
+            ->addColumn('league', 'string', ['limit' => 10, 'null' => false])
             // 생성일시, 수정일시
             ->addTimestamps('created_at', 'updated_at')
             ->create();
