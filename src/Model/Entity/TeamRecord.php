@@ -41,7 +41,7 @@ class TeamRecord extends Entity
      */
     protected $_accessible = [
         'year_id' => true,
-        'rank' => true,
+        'ranking' => true,
         'team_name' => true,
         'games_played' => true,
         'wins' => true,

@@ -62,9 +62,9 @@ class TeamRecordsTable extends Table
             ->notEmptyString('year_id');
 
         $validator
-            ->integer('rank')
-            ->requirePresence('rank', 'create')
-            ->notEmptyString('rank');
+            ->integer('ranking')
+            ->requirePresence('ranking', 'create')
+            ->notEmptyString('ranking');
 
         $validator
             ->scalar('team_name')
@@ -128,12 +128,11 @@ class TeamRecordsTable extends Table
         $validator
             ->scalar('league')
             ->maxLength('league', 10)
-            ->requirePresence('league', 'create')
-            ->notEmptyString('league');
+            ->allowEmptyString('league'); // 필수값을 허용하지 않도록 변경
 
         $validator
             ->dateTime('created_at')
-            ->notEmptyDateTime('created_at');
+            ->allowEmptyDateTime('created_at');
 
         $validator
             ->dateTime('updated_at')

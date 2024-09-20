@@ -20,7 +20,7 @@ class CreateTeamRecords extends AbstractMigration
             // 연도
             ->addColumn('year_id', 'integer', ['null' => false])
             // 순위
-            ->addColumn('rank', 'integer', ['null' => false])
+            ->addColumn('ranking', 'integer', ['null' => false])
             // 팀 이름
             ->addColumn('team_name', 'string', ['limit' => 255, 'null' => false])
             // 게임 수
@@ -43,8 +43,16 @@ class CreateTeamRecords extends AbstractMigration
             ->addColumn('home_record', 'string', ['limit' => 20])
             // 원정 기록
             ->addColumn('away_record', 'string', ['limit' => 20])
+
             // (99,00시즌 한정) 리그 구분 (드림리그 또는 매직리그)
-            ->addColumn('league', 'string', ['limit' => 10, 'null' => false])
+            ->addColumn('league',
+                'string',
+                [
+                    'limit' => 10,
+                    'default' => null,
+                    'comment' => '리그 구분 (드림리그 또는 매직리그)'
+                ])
+
             // 생성일시, 수정일시
             ->addTimestamps('created_at', 'updated_at')
             ->create();
