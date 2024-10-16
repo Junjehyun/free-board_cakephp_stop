@@ -57,8 +57,10 @@ return function (RouteBuilder $routes): void {
          */
         $builder->connect(
             '/index',
-            ['controller' => 'Main', 'action' => 'index']
-        );
+            [
+                'controller' => 'Main',
+                'action' => 'index']
+        )->setMethods(['GET']);
 
         /**
          * Year Page
@@ -66,8 +68,21 @@ return function (RouteBuilder $routes): void {
          */
         $builder->connect(
             '/year',
-            ['controller' => 'Year', 'action' => 'yearIndex']
-        );
+            [
+                'controller' => 'Year',
+                'action' => 'yearIndex']
+        )->setMethods(['GET']);
+
+        /**
+         * Get Team Records AJAX
+         */
+        $builder->connect(
+            '/year/getTeamRecords',
+            [
+                'controller' => 'Year',
+                'action' => 'getTeamRecords'
+            ]
+        )->setMethods(['GET']);
 
 
         /*

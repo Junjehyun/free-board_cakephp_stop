@@ -16,18 +16,18 @@
     <table class="table-auto w-full border-collapse border border-gray-300">
         <thead>
             <tr class="bg-gray-200">
-                <th class="border border-gray-300 px-4 py-2 text-center">순위</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">팀이름</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">시합</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">승</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">패</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">무</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">승률</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">게임차</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">최근</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">연속</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">홈 성적</th>
-                <th class="border border-gray-300 px-4 py-2 text-center">원정 성적</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">rank</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">team</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">games</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">wins</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">loses</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">draw</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">rate</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">diff</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">last10</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">streak</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">home</th>
+                <th class="border border-gray-300 px-4 py-2 text-center">away</th>
             </tr>
         </thead>
         <tbody>
@@ -74,3 +74,10 @@
         </tbody>
     </table>
 </div>
+<script>
+    $('select[name="year"]').on('change', function() {
+        const year = $(this).val();
+        alert('when ? : ' + year);
+
+    });
+</script>

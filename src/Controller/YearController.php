@@ -41,4 +41,8 @@ class YearController extends AppController {
         $this->set('defaultYear', $defaultYear);
 
     }
+
+    public function getTeamRecords() {
+
+    }
 }
