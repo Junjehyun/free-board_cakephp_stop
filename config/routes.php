@@ -77,12 +77,13 @@ return function (RouteBuilder $routes): void {
          * Get Team Records AJAX
          */
         $builder->connect(
-            '/year/getTeamRecords',
+            '/year/getTeamRecords/{year_id}',
             [
                 'controller' => 'Year',
                 'action' => 'getTeamRecords'
             ]
-        )->setMethods(['GET']);
+        )->setPass(['year_id'])
+        ->setMethods(['GET']);
 
 
         /*

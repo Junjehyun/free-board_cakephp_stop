@@ -1,18 +1,14 @@
-<?php $this->assign('title', '연도별 기록실'); ?>
-
+<?php
+    $this->assign('title', '연도별 기록실');
+?>
+<!-- 처음부터 전부 다시 시작, 너무 놀았다 제대로 하자. -->
 <div class="container grid justify-center">
-    <h1 class="text-center mb-3">연도별 기록</h1>
-    <select name="year" class="form-select">
+    <select name="year" class="form-select" id="yearSelect">
         <option value="">Select Year</option>
-        <?php foreach ($years as $id => $year): ?>
-            <option value="<?= $id ?>" <?= $year == $defaultYear ? 'selected' : '' ?>>
-                <?= $year ?>
-            </option>
-        <?php endforeach; ?>
     </select>
 </div>
 <div class="container mx-auto mt-8">
-    <h1 class="text-2xl font-bold text-center mb-6">2023년도 KBO리그 순위</h1>
+    <h1 class="text-2xl font-bold text-left mb-6" id="yearTitle"><?php //$defaultYear ?>시즌 순위</h1>
     <table class="table-auto w-full border-collapse border border-gray-300">
         <thead>
             <tr class="bg-gray-200">
@@ -31,53 +27,56 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($teamRecords as $record): ?>
+            <?php //foreach ($teamRecords as $record): ?>
                 <tr class="bg-white">
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->ranking ?>
+                        <?php //$record->ranking ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->team_name ?>
+                        <?php //$record->team_name ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->games_played ?>
+                        <?php //$record->games_played ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->wins ?>
+                        <?php //$record->wins ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->losses ?>
+                        <?php //$record->losses ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->draws ?>
+                        <?php //$record->draws ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->win_rate ?>
+                        <?php //$record->win_rate ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->game_diff ?>
+                        <?php //$record->game_diff ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->last_10_games ?>
+                        <?php //$record->last_10_games ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->streak ?>
+                        <?php //$record->streak ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->home_record ?>
+                        <?php //$record->home_record ?>
                     </td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
-                        <?= $record->away_record ?>
+                        <?php //$record->away_record ?>
                     </td>
                 </tr>
-            <?php endforeach; ?>
+            <?php //endforeach; ?>
         </tbody>
     </table>
 </div>
 <script>
-    $('select[name="year"]').on('change', function() {
-        const year = $(this).val();
-        alert('when ? : ' + year);
+    // h1 연도 타이틀 동적 설정
+    // const yearSelect = document.getElementById('yearSelect');
+    // const yearTitle = document.getElementById('yearTitle');
 
-    });
+    // yearSelect.addEventListener('change', function() {
+    //     const selectedYear = yearSelect.options[yearSelect.selectedIndex].text;
+    //     yearTitle.innerText = `${selectedYear} 순위`;
+    // });
 </script>
