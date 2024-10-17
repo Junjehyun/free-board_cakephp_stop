@@ -2,16 +2,19 @@
 <div class="flex flex-row">
     <div class="mb-96 w-full flex justify-between text-black">
         <a href="/year">
-            <button class="">연도별 순위</button>
+            <button class="">Years Ranking</button>
         </a>
         <a href="">
-            <button class="">About Team</button>
+            <button class="">Team</button>
         </a>
         <a href="">
-            <button class="">레전드</button>
+            <button class="">Player</button>
         </a>
         <a href="">
-            <button class="">자유게시판</button>
+            <button class="">Legends</button>
+        </a>
+        <a href="">
+            <button class="">Board</button>
         </a>
     </div>
 </div>

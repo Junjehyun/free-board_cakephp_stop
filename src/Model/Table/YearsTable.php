@@ -40,6 +40,10 @@ class YearsTable extends Table
         $this->setTable('years');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('TeamRecords', [
+            'foreignKey' => 'year_id', // TeamRecords 테이블의 year_id 컬럼을 참조
+        ]);
     }
 
     /**
