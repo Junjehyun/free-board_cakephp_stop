@@ -67,15 +67,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav class="top-nav">
         <div class="top-nav-title">
             <a href="<?= $this->Url->build('/index') ?>">
-                <span>
-                    <img src="img/logo/kbo_header_logo.jpg" style="width:80px;">
-                </span>
-                <!-- <span> KBO </span>HISTORY -->
+                <span>学習記録</span>を残そう
             </a>
         </div>
         <div class="top-nav-links">
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
+            <a href="">
+                <button class="text-black">ログイン</button>
+            </a>
+            <a href="">
+                <button class="text-black">新規登録</button>
+            </a>
         </div>
     </nav>
     <main class="main flex-grow my-20">

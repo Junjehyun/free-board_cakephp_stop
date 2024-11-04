@@ -1,20 +1,20 @@
 <?php $this->assign('title', 'Welcome!'); ?>
 <div class="flex flex-row">
     <div class="mb-96 w-full flex justify-between text-black">
-        <a href="/year">
-            <button class="">Years Ranking</button>
+        <a href="">
+            <button class="">学習目標</button>
         </a>
         <a href="">
-            <button class="">Team</button>
+            <button class="">TO DO LIST</button>
         </a>
         <a href="">
-            <button class="">Player</button>
+            <button class="">学習討論室</button>
         </a>
         <a href="">
-            <button class="">Legends</button>
+            <button class="">メモ帳</button>
         </a>
         <a href="">
-            <button class="">Board</button>
+            <button class="">カレンダー</button>
         </a>
     </div>
 </div>
@@ -30,5 +30,8 @@
                 </tr>
             </tbody>
         </table>
+        <a href="">
+            <h2 class="text-right text-2xl mt-10">관리</h2>
+        </a>
     </div>
 </div>

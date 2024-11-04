@@ -98,9 +98,9 @@
                 data: { year: selectedYear },
                 dataType: 'json',
                 success: function(response) {
-                    console.log('서버로부터 응답:', response); // response 형식 확인
+                    console.log('서버로부터 응답:', response);
                     if (Array.isArray(response.records)) {
-                        updateTable(response.records);  // 배열이면 테이블 업데이트
+                        updateTable(response.records);
                     } else {
                         console.error("응답이 배열이 아닙니다.", response.records);
                     }
@@ -134,7 +134,7 @@
                     <td class="border border-gray-300 px-4 py-2 text-center">${record.away_record}</td>
                 </tr>
             `;
-            tbody.append(row); // 새로 생성된 행을 테이블에 추가
+            tbody.append(row);
         });
     }
 </script>
